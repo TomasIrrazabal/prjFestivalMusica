@@ -25,9 +25,11 @@ function makeGallery(){
 
     for(let i=1; i <= IMAGE_COUNT; i++){
         const image = document.createElement('IMG');
+        image.loading = 'lazy';
+        image.width = "300";
+        image.heigth = "200";
         image.src = `src/img/gallery/full/${i}.jpg`;
         image.alt = 'Gallery image';
-        
         // Event Handler
         image.onclick = function () {
             showImage(i);
